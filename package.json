@@ -1,0 +1,20 @@
+{
+  "name": "es6-tutorial",
+  "version": "6.1.0",
+  "private": true,
+  "scripts": {
+    "postinstall": "remotedev-debugger",
+    "start": "node_modules/react-native/packager/packager.sh",
+    "eslint": "eslint",
+    "test": "jest"
+  },
+  "keywords": [
+    "packager",
+    "es6"
+	],
+	
+	"scripts": {
+		"babel": "babel --presets es2015 js/main.js -o build/main.bundle.js",
+		"start": "http-server"
+	}
+}
