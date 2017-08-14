@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/afranco07/es6-tutorial/issues"
   },
-  "homepage": "https://github.com/afranco07/es6-tutorial#readme"
+  "homepage": "https://github.com/afranco07/es6-tutorial#readme",
+  "devDependencies": {
+    "babel-preset-es2015": "^6.24.1"
+  }
 }
