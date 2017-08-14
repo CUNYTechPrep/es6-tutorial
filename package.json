@@ -4,7 +4,8 @@
   "description": "After reading the notes below, start the tutorial [here](http://ccoenraets.github.io/es6-tutorial).",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "babel": "babel --presets es2015 js/main.js -o build/main.bundle.js",
+    "start": "http-server"
   },
   "repository": {
     "type": "git",
