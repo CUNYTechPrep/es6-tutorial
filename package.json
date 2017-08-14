@@ -1,0 +1,19 @@
+{
+  "name": "es6-tutorial",
+  "version": "1.0.0",
+  "description": "After reading the notes below, start the tutorial [here](http://ccoenraets.github.io/es6-tutorial).",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/afranco07/es6-tutorial.git"
+  },
+  "author": "Alberto",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/afranco07/es6-tutorial/issues"
+  },
+  "homepage": "https://github.com/afranco07/es6-tutorial#readme"
+}
