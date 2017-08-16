@@ -105,7 +105,7 @@ var _createClass = function () { function defineProperties(target, props) { for 
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-var Mortgage = exports.Mortgage = function () {
+var Mortgage = function () {
     function Mortgage(principal, years, rate) {
         _classCallCheck(this, Mortgage);
 
@@ -146,6 +146,9 @@ var Mortgage = exports.Mortgage = function () {
     return Mortgage;
 }();
 
+exports.default = Mortgage;
+;
+
 /***/ })
 /******/ ]);
-//# sourceMappingURL=main.bundle.js.map
+//# sourceMappingURL=app.bundle.js.map
