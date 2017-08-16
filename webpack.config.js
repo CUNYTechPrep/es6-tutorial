@@ -3,7 +3,7 @@
 
  module.exports = {
      entry: {
-         app: './js/main.js',
+         main: './js/main.js',
          ratefinder: './js/ratefinder.js'
      },
      output: {
