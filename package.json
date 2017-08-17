@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "babel": "babel --presets es2015 js/main.js -o build/main.bundle.js",
-    "start": "http-server"
+    "start": "http-server" ,
 		"webpack": "webpack"
 },
   "repository": {
