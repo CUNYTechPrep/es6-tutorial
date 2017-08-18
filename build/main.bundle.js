@@ -70,37 +70,6 @@
 "use strict";
 
 
-var _mortgage = __webpack_require__(1);
-
-var _mortgage2 = _interopRequireDefault(_mortgage);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-document.getElementById('calcBtn').addEventListener('click', function () {
-    var principal = document.getElementById("principal").value;
-    var years = document.getElementById("years").value;
-    var rate = document.getElementById("rate").value;
-    var mortgage = new _mortgage2.default(principal, years, rate);
-    document.getElementById("monthlyPayment").innerHTML = mortgage.monthlyPayment.toFixed(2);
-    document.getElementById("monthlyRate").innerHTML = (rate / 12).toFixed(2);
-    var html = "";
-    mortgage.amortization.forEach(function (year, index) {
-        return html += '\n        <tr>\n            <td>' + (index + 1) + '</td>\n            <td class="currency">' + Math.round(year.principalY) + '</td>\n            <td class="stretch">\n                <div class="flex">\n                    <div class="bar principal"\n                         style="flex:' + year.principalY + ';-webkit-flex:' + year.principalY + '">\n                    </div>\n                    <div class="bar interest"\n                         style="flex:' + year.interestY + ';-webkit-flex:' + year.interestY + '">\n                    </div>\n                </div>\n            </td>\n            <td class="currency left">' + Math.round(year.interestY) + '</td>\n            <td class="currency">' + Math.round(year.balance) + '</td>\n        </tr>\n    ';
-    });
-    document.getElementById("amortization").innerHTML = html;
-});
-
-/***/ }),
-/* 1 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -115,13 +84,13 @@ var Mortgage = function () {
     }
 
     _createClass(Mortgage, [{
-        key: "monthlyPayment",
+        key: 'monthlyPayment',
         get: function get() {
             var monthlyRate = this.rate / 100 / 12;
             return this.principal * monthlyRate / (1 - Math.pow(1 / (1 + monthlyRate), this.years * 12));
         }
     }, {
-        key: "amortization",
+        key: 'amortization',
         get: function get() {
             var monthlyPayment = this.monthlyPayment;
             var monthlyRate = this.rate / 100 / 12;
@@ -146,7 +115,19 @@ var Mortgage = function () {
     return Mortgage;
 }();
 
-exports.default = Mortgage;
+document.getElementById('calcBtn').addEventListener('click', function () {
+    var principal = document.getElementById("principal").value;
+    var years = document.getElementById("years").value;
+    var rate = document.getElementById("rate").value;
+    var mortgage = new Mortgage(principal, years, rate);
+    document.getElementById("monthlyPayment").innerHTML = mortgage.monthlyPayment.toFixed(2);
+    document.getElementById("monthlyRate").innerHTML = (rate / 12).toFixed(2);
+    var html = "";
+    mortgage.amortization.forEach(function (year, index) {
+        return html += '\n        <tr>\n            <td>' + (index + 1) + '</td>\n            <td class="currency">' + Math.round(year.principalY) + '</td>\n            <td class="stretch">\n                <div class="flex">\n                    <div class="bar principal"\n                         style="flex:' + year.principalY + ';-webkit-flex:' + year.principalY + '">\n                    </div>\n                    <div class="bar interest"\n                         style="flex:' + year.interestY + ';-webkit-flex:' + year.interestY + '">\n                    </div>\n                </div>\n            </td>\n            <td class="currency left">' + Math.round(year.interestY) + '</td>\n            <td class="currency">' + Math.round(year.balance) + '</td>\n        </tr>\n    ';
+    });
+    document.getElementById("amortization").innerHTML = html;
+});
 
 /***/ })
 /******/ ]);
