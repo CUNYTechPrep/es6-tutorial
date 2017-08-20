@@ -158,3 +158,21 @@ button:active {
 button:focus {
     outline:0;
 }
+
+.ratio-table {
+	width: 100%;
+}
+
+.total, .portion {
+	height: 8px;
+}
+
+.total {
+	/*background-color: #388ACC;*/
+	background-color: #EF6C00;
+}
+
+.portion {
+	/*background-color: #DF752F;*/
+	background-color: #0288D1;
+}
