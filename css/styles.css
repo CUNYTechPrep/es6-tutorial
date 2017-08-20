@@ -168,9 +168,11 @@ button:focus {
 }
 
 .total {
-	background-color: #388ACC;
+	/*background-color: #388ACC;*/
+	background-color: #EF6C00;
 }
 
 .portion {
-	background-color: #DF752F;
+	/*background-color: #DF752F;*/
+	background-color: #0288D1;
 }
