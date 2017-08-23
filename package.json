@@ -1,0 +1,21 @@
+{
+  "name": "es6-tutorial-master",
+  "version": "1.0.0",
+  "description": "Start the tutorial [here](http://ccoenraets.github.io/es6-tutorial).",
+  "main": "index.js",
+  "scripts": {
+    "babel": "babel --presets es2015 js/main.js -o build/main.bundle.js",
+    "start": "http-server",
+    "webpack": "webpack"
+},
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-es2015": "^6.24.1",
+    "http-server": "^0.10.0",
+    "webpack": "^3.5.5"
+  }
+}
