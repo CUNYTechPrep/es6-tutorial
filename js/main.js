@@ -23,6 +23,7 @@ let calculateAmortization = (principal, years, rate) => {
         }
         amortization.push({principalY, interestY, balance});
     }
+    amortization.forEach(month => console.log(month));
     return {monthlyPayment, monthlyRate, amortization};
 };
 
@@ -33,5 +34,4 @@ document.getElementById('calcBtn').addEventListener('click', () => {
     let {monthlyPayment, monthlyRate} = calculateAmortization(principal, years, rate);
     document.getElementById("monthlyPayment").innerHTML = monthlyPayment.toFixed(2);
     document.getElementById("monthlyRate").innerHTML = (monthlyRate * 100).toFixed(2);
-    amortization.forEach(month => console.log(month));
 });
