@@ -4,7 +4,7 @@
   "description": "After reading the notes below, start the tutorial [here](http://ccoenraets.github.io/es6-tutorial).",
   "main": "index.js",
   "scripts": {
-    "babel": "babel --presets es2015 js/main.js -o build/main.bundle.js",
+    "babel": "babel --preset es2015 js/main.js -o build/main.bundle.js",
     "start": "http-server"
   },
   "repository": {
